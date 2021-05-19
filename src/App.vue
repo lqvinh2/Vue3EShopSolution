@@ -23,13 +23,10 @@
 
 <script>
 
-
-$(function(){
-    alert('1')
-})
-
+  
 export default {
-
+ async setup() {
+  },
 }
 
 
