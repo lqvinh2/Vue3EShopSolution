@@ -1,20 +1,18 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-
+<div class="container-fluid">
+      <img alt="Vue logo" src="../assets/logo.png">
+    <h2>test run terminal : "json-server --watch data/db.json"</h2>
     <div v-if="projects.length">
         <div v-for="project in projects" :key="project.id">
-
-             <p>{{project.title}}</p>
-
+             <p>{{project.id}} : {{project.title}}</p>
+             <p>{{project.details}}</p>
         </div>
     </div>
-  
-  </div>
+</div>
+
 </template>
 
 <script>
-
 
 export default {
   name: 'Home',
