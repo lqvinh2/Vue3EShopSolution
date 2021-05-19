@@ -3,13 +3,19 @@
       {
         "id": 1,
         "title": "Create new homepage banner",
-        "details": "Lorem ipsum",
+        "details": "Lorem ipsum 1",
         "complete": false
       },
       {
         "id": 2,
         "title": "Make marketing email",
-        "details": "Lorem ipsum",
+        "details": "Lorem ipsum 2",
+        "complete": true
+      },
+      {
+        "id": 3,
+        "title": "OAS marketing email",
+        "details": "Lorem ipsum 3",
         "complete": true
       }
     ]

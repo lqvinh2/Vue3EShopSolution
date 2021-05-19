@@ -1,25 +1,26 @@
 <template>
-<Navbar></Navbar>
-<Todos></Todos>
+<h2>My App TODOS , now you have : {{projects.length}} TODO job</h2>
+
 </template>
 
 <script>
 
-import { computed, watch, ref } from 'vue';
+import { computed, watch, ref , onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-
+import {mapState} from 'vuex'
 ////
-import Todos from '../src/components/Todos.vue'
-import Navbar from '../src/components/Navbar.vue'
+// import Todos from '../src/components/Todos.vue'
 export default {
-    name:'App',
+    name:'Navbar',
     props: ['',''],
-    components:{Todos, Navbar},
-    
-    mounted(){
-    
+    // components:{Todos},
+    computed : {
+        ...mapState(["projects"])
     },
     setup() {
+        onMounted(() => {
+        
+        });
         const router = useRouter();
         
         // code here
@@ -35,5 +36,5 @@ export default {
 </script>
 
 <style>
-@import 'assets/css/main.css';
+/* @import 'assets/css/main.css'; */
 </style>
