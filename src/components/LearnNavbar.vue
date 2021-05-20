@@ -50,7 +50,7 @@ import { mapState, mapMutations, mapActions, mapGetters } from "vuex";
 ////
 // import Todos from '../src/components/Todos.vue'
 export default {
-  name: "Navbar",
+  name: "",
   props: ["", ""],
   // components:{Todos},
   computed: {

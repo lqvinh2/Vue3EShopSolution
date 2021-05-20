@@ -1,39 +1,40 @@
 <template>
-<Navbar></Navbar>
-<Todos></Todos>
+  <LearnNavbar></LearnNavbar>
+  <LearnTodos></LearnTodos>
+
+  <a class="btn-floating btn-large waves-effect waves-light red"
+    ><i class="material-icons">add</i></a
+  >
 </template>
 
 <script>
-
-import { computed, watch, ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { computed, watch, ref } from "vue";
+import { useRouter } from "vue-router";
 
 ////
-import Todos from '../src/components/Todos.vue'
-import Navbar from '../src/components/Navbar.vue'
+import LearnTodos from "./components/LearnTodos.vue";
+import LearnNavbar from "./components/LearnNavbar.vue";
 export default {
-    name:'App',
-    props: ['',''],
-    components:{Todos, Navbar},
-    
-    mounted(){
-    
-    },
-    setup() {
-        const router = useRouter();
-        
-        // code here
-        const emailXXX = ref('');
-        const handleSubmit = () => {
-            console.log('1234');
-        };
-        ///////////////
-        
-        return { emailXXX , handleSubmit};
-    },
-}
+  name: "",
+  props: ["", ""],
+  components: { LearnTodos, LearnNavbar },
+
+  mounted() {},
+  setup() {
+    const router = useRouter();
+
+    // code here
+    const emailXXX = ref("");
+    const handleSubmit = () => {
+      console.log("1234");
+    };
+    ///////////////
+
+    return { emailXXX, handleSubmit };
+  },
+};
 </script>
 
 <style>
-@import 'assets/css/main.css';
+@import "assets/css/main.css";
 </style>
