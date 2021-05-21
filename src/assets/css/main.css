@@ -1,11 +1,64 @@
+@charset "UTF-8";
 * {
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  list-style-type: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-body {
-  background: #c8d6ca;
+/* Set các giá trị với màn hình tương ứng */
+@media only screen and (min-width: 1024px) {
+  body {
+    background: #d5dbcb;
+  }
+}
+
+.form-search {
+  padding-right: 15%;
+}
+
+#navbarSupportedContent {
+  position: relative;
+}
+
+#navbarSupportedContent .cart-layout-arrow {
+  display: none;
+}
+
+#navbarSupportedContent .cart-layout {
+  border: 1px solid red;
+  position: absolute;
+  width: 200px;
+  right: 2%;
+  top: 2px;
+}
+
+#navbarSupportedContent .cart-layout .cart-layout-icon-cart {
+  display: block;
+  font-size: 1.8rem;
+  color: #b6f50b;
+  border: 1px solid #b6f50b;
+}
+
+#navbarSupportedContent .cart-layout .cart-layout-icon-cart:hover + .cart-layout-arrow {
+  display: block;
+}
+
+#navbarSupportedContent .cart-layout .cart-layout-icon-cart:hover {
+  color: #cc732b;
+}
+
+#navbarSupportedContent .cart-layout .cart-layout-arrow {
+  position: relative;
+  top: 100%;
+  right: 20%;
+  background-color: #ffffff;
+}
+
+#navbarSupportedContent .cart-layout .cart-layout-arrow .cart-layout-arrow-img {
+  border: 1px solid red;
+  width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=main.css.map */

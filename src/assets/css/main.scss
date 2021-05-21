@@ -1,8 +1,121 @@
-*{
-    margin: 0;
-    padding: 20px;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+/* Set các giá trị với màn hình tương ứng */
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+// Khai báo kích thước tương ứng với màn hình thiết bị
+
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+$XS: 480px;
+$SM: 768px;
+$MD: 1024px;
+$XL: 1170px;
+
+// media queries
+
+@mixin Responsive($canvas) {
+  // mobile
+  @if $canvas == $mobile-width {
+    @media only screen and (min-width: $XS) {
+      @content;
+    }
   }
+  // tablet
+  @else if $canvas == $tablet-width {
+    @media only screen and (min-width: $SM) {
+      @content;
+    }
+  }
+
+  // PC
+  @else if $canvas == $desktop-width {
+    @media only screen and (min-width: $MD) {
+      @content;
+    }
+  }
+
+  //
+  // @else if $canvas == XL {
+  //   @media only screen and (min-width: $XL) {
+  //     @content;
+  //   }
+  // }
+}
+
+@include Responsive($mobile-width) {
+}
+@include Responsive($tablet-width) {
+}
+@include Responsive($desktop-width) {
   body {
-    background: #c8d6ca;
+    background: #d5dbcb;
   }
+}
+// @include Responsive(XL) {
+// }
+
+.form-search {
+  padding-right: 15%;
+}
+
+#navbarSupportedContent {
+  .cart-layout-arrow{
+    display: none;
+  }
+
+  position: relative;
+
+  .cart-layout {
+    border: 1px solid red;
+    position: absolute;
+    width: 200px;
+    // height: 20px;
+    right: 2%;
+    top: 2px;
+
+    .cart-layout-icon-cart {
+      display:block;
+      font-size:1.8rem;
+      color: rgb(182, 245, 11);
+      border: 1px solid rgb(182, 245, 11);
+      &:hover  + .cart-layout-arrow{
+       // color: rgb(204, 115, 43);
+        display: block;
+      }
+      &:hover {
+         color: rgb(204, 115, 43);
+        
+       }
+
+  
+    }
+
+    .cart-layout-arrow{
+
+      position: relative;
+      top:  100%;
+      right: 20%;
+   
+      background-color: #ffffff;
+      .cart-layout-arrow-img {
+        border: 1px solid red;
+        width: 100%;
+        height: 100%;
+      }
+  
+    }
+    
+  }
+}
+
+//https://www.youtube.com/watch?v=9qwSqLYKj38&ab_channel=F8Official
