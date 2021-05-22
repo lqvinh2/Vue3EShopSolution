@@ -1,4 +1,5 @@
 <template>
+  <h1>home 1 S</h1>
   <div class="container-fluid">
     <img alt="Vue logo" src="../assets/logo.png" />
     <h2>test run terminal : "json-server --watch data/db.json"</h2>
