@@ -210,8 +210,8 @@
   height: 160px;
   -webkit-transform: skewX(351deg);
           transform: skewX(351deg);
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .bd-content-page .product-holder .product-holder-1 .product-holder-2 .product-holder-2-1 .product-holder-2-1-image:hover::before {
