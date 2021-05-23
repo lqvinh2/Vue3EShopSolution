@@ -500,7 +500,11 @@
                   <div class="product-holder-2-2">
                     <!-- addTC = button add to cart -->
                     <div class="product-holder-2-2-buuton-addTC">
-                      <button type="button" class="btn btn-danger btn-ATC">
+                      <button
+                        type="button"
+                        class="btn btn-danger btn-ATC"
+                        @click="testClickBtn"
+                      >
                         ADD TO CART
                       </button>
                     </div>
@@ -544,7 +548,11 @@
                   <div class="product-holder-2-2">
                     <!-- addTC = button add to cart -->
                     <div class="product-holder-2-2-buuton-addTC">
-                      <button type="button" class="btn btn-danger btn-ATC">
+                      <button
+                        type="button"
+                        class="btn btn-danger btn-ATC"
+                        @click="testClickBtn"
+                      >
                         ADD TO CART
                       </button>
                     </div>
@@ -588,7 +596,11 @@
                   <div class="product-holder-2-2">
                     <!-- addTC = button add to cart -->
                     <div class="product-holder-2-2-buuton-addTC">
-                      <button type="button" class="btn btn-danger btn-ATC">
+                      <button
+                        type="button"
+                        class="btn btn-danger btn-ATC"
+                        @click="testClickBtn"
+                      >
                         ADD TO CART
                       </button>
                     </div>
@@ -632,7 +644,11 @@
                   <div class="product-holder-2-2">
                     <!-- addTC = button add to cart -->
                     <div class="product-holder-2-2-buuton-addTC">
-                      <button type="button" class="btn btn-danger btn-ATC">
+                      <button
+                        type="button"
+                        class="btn btn-danger btn-ATC"
+                        @click="testClickBtn"
+                      >
                         ADD TO CART
                       </button>
                     </div>
@@ -676,7 +692,11 @@
                   <div class="product-holder-2-2">
                     <!-- addTC = button add to cart -->
                     <div class="product-holder-2-2-buuton-addTC">
-                      <button type="button" class="btn btn-danger btn-ATC">
+                      <button
+                        type="button"
+                        class="btn btn-danger btn-ATC"
+                        @click="testClickBtn"
+                      >
                         ADD TO CART
                       </button>
                     </div>
@@ -720,7 +740,11 @@
                   <div class="product-holder-2-2">
                     <!-- addTC = button add to cart -->
                     <div class="product-holder-2-2-buuton-addTC">
-                      <button type="button" class="btn btn-danger btn-ATC">
+                      <button
+                        type="button"
+                        class="btn btn-danger btn-ATC"
+                        @click="testClickBtn"
+                      >
                         ADD TO CART
                       </button>
                     </div>
@@ -764,7 +788,11 @@
                   <div class="product-holder-2-2">
                     <!-- addTC = button add to cart -->
                     <div class="product-holder-2-2-buuton-addTC">
-                      <button type="button" class="btn btn-danger btn-ATC">
+                      <button
+                        type="button"
+                        class="btn btn-danger btn-ATC"
+                        @click="testClickBtn"
+                      >
                         ADD TO CART
                       </button>
                     </div>
@@ -808,7 +836,11 @@
                   <div class="product-holder-2-2">
                     <!-- addTC = button add to cart -->
                     <div class="product-holder-2-2-buuton-addTC">
-                      <button type="button" class="btn btn-danger btn-ATC">
+                      <button
+                        type="button"
+                        class="btn btn-danger btn-ATC"
+                        @click="testClickBtn"
+                      >
                         ADD TO CART
                       </button>
                     </div>
@@ -852,7 +884,11 @@
                   <div class="product-holder-2-2">
                     <!-- addTC = button add to cart -->
                     <div class="product-holder-2-2-buuton-addTC">
-                      <button type="button" class="btn btn-danger btn-ATC">
+                      <button
+                        type="button"
+                        class="btn btn-danger btn-ATC"
+                        @click="testClickBtn"
+                      >
                         ADD TO CART
                       </button>
                     </div>
@@ -4416,9 +4452,27 @@ export default {
     const handleSubmit = () => {
       console.log("1234");
     };
+
+    const testClickBtn = (event) => {
+      const btn_pos = $(event.target).position();
+      const btn_offset = $(event.target).offset();
+      const cart_offset = $(".cart-layout-icon-cart").offset();
+      $(".cart-fly-from-to").offset({
+        top: btn_offset.top,
+        left: btn_offset.left,
+      });
+
+      setTimeout(() => {
+        $(".cart-fly-from-to").offset({
+          top: cart_offset.top,
+          left: cart_offset.left,
+        });
+      }, 500);
+    };
+
     ///////////////
 
-    return { emailXXX, handleSubmit };
+    return { emailXXX, handleSubmit, testClickBtn };
   },
 };
 </script>

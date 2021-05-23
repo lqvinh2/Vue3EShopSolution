@@ -157,6 +157,7 @@
 }
 
 .bd-content-page {
+  z-index: 1;
   padding: 10px;
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -164,17 +165,21 @@
 }
 
 .bd-content-page .product-holder {
+  z-index: 2;
   padding-left: 5px;
   padding-right: 5px;
   padding-bottom: 10px;
 }
 
 .bd-content-page .product-holder .product-holder-1 {
+  z-index: 3;
   border: 1px solid #d4d1d1;
   padding: 7px;
 }
 
 .bd-content-page .product-holder .product-holder-1 .product-holder-2 {
+  z-index: 4;
+  background: white;
   border: 1px solid #d8d2d2;
   padding: 1rem;
 }
@@ -194,6 +199,26 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+}
+
+.bd-content-page .product-holder .product-holder-1 .product-holder-2 .product-holder-2-1 .product-holder-2-1-image::before {
+  content: "";
+  z-index: 10;
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 160px;
+  -webkit-transform: skewX(351deg);
+          transform: skewX(351deg);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.bd-content-page .product-holder .product-holder-1 .product-holder-2 .product-holder-2-1 .product-holder-2-1-image:hover::before {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.3)));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px);
 }
 
 .bd-content-page .product-holder .product-holder-1 .product-holder-2 .product-holder-2-1 .product-holder-2-1-image a {
@@ -277,18 +302,20 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  z-index: 1;
 }
 
 .bd-sidebar-right .product-side-holder {
+  z-index: 2;
   padding: 0;
   margin: 0;
   margin-top: 10px;
   height: 90vh;
-  z-index: 1;
   overflow-x: hidden;
 }
 
 .bd-sidebar-right .product-side-holder .product-side-holder-item {
+  z-index: 3;
   width: 100%;
   height: 102px;
   padding: 0;
@@ -388,7 +415,7 @@
   width: 100px;
   height: 100px;
   background: chocolate;
-  top: 3px;
+  top: 50px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
