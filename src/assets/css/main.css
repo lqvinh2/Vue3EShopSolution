@@ -148,8 +148,10 @@
   color: #212121;
   padding: 10px 0px 10px 20px;
   border-bottom: 1px dotted #c32a2a;
-  -webkit-transition-property: background-color 1s;
-  transition-property: background-color 1s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
 }
 
 .bd-sidebar-left .bd-sidebar-left-holder .menu-side-left-search-by-category .menu-side-left-search-by-category_body > .category_body-ul li a:hover {
@@ -210,15 +212,15 @@
   height: 160px;
   -webkit-transform: skewX(351deg);
           transform: skewX(351deg);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .bd-content-page .product-holder .product-holder-1 .product-holder-2 .product-holder-2-1 .product-holder-2-1-image:hover::before {
   background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.3)));
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
-  -webkit-transform: translateX(200px);
-          transform: translateX(200px);
+  -webkit-transform: translateX(400px);
+          transform: translateX(400px);
 }
 
 .bd-content-page .product-holder .product-holder-1 .product-holder-2 .product-holder-2-1 .product-holder-2-1-image a {

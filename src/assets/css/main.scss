@@ -202,7 +202,8 @@ $XL: 1170px;
               color: #212121;
               padding: 10px 0px 10px 20px;
               border-bottom: 1px dotted #c32a2a;
-              transition-property: background-color 1s;
+              transition : 0.3s;
+              transition-property: background-color;
 
               &:hover {
                 background-color: #84c639;
@@ -259,7 +260,7 @@ $XL: 1170px;
               height: 160px;
 
               transform: skewX(351deg);
-              transition: 0.5s;
+              transition: 0.4s;
             }
 
             display: block;
@@ -273,7 +274,7 @@ $XL: 1170px;
                   rgba(255, 255, 255, 0) 0%,
                   rgba(255, 255, 255, 0.3) 100%
                 );
-                transform: translateX(200px);
+                transform: translateX(400px);
               }
             }
 
